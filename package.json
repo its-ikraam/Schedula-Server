@@ -1,6 +1,6 @@
 {
   "name": "schedula-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "High-performance event management backend service with QR code generation, health monitoring, and comprehensive logging capabilities",
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,10 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "prepare": "husky install",
     "typecheck": "tsc --noEmit",
-    "validate": "npm run lint && npm run format && npm run typecheck"
+    "validate": "npm run lint && npm run format && npm run typecheck",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
     "qr-code",
@@ -38,6 +41,7 @@
     "@commitlint/config-conventional": "^18.4.3",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
+    "@types/jest": "29.5.14",
     "@types/node": "^20.10.4",
     "@types/qrcode": "^1.5.5",
     "@types/supertest": "2.0.16",
@@ -49,10 +53,12 @@
     "eslint-plugin-prettier": "^5.0.1",
     "helmet": "8.1.0",
     "husky": "^8.0.3",
+    "jest": "29.7.0",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
     "supertest": "6.3.4",
+    "ts-jest": "29.3.4",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3",
     "winston": "3.17.0"
