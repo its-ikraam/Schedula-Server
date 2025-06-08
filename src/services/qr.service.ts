@@ -9,7 +9,7 @@ export class QRService {
     try {
       const { qrId, qrCode, userId } = params;
       const qrData = JSON.stringify({ qrId, qrCode });
-      
+
       const qrBuffer = await QRCode.toBuffer(qrData, {
         type: 'png',
         errorCorrectionLevel: 'H',
