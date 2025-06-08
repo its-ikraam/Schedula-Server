@@ -1,7 +1,7 @@
 {
-  "name": "qr-code-service",
+  "name": "schedula-server",
   "version": "1.0.0",
-  "description": "QR Code Generation and Management Service",
+  "description": "High-performance event management backend service with QR code generation, health monitoring, and comprehensive logging capabilities",
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",

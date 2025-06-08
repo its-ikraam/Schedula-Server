@@ -1,4 +1,4 @@
-# Event Server
+# Schedula Server
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -6,7 +6,18 @@
 ![Node.js](https://img.shields.io/badge/Node.js-20.0-green.svg)
 ![Coverage](https://img.shields.io/badge/coverage-80%25-brightgreen.svg)
 
-**Event Server** is a professional TypeScript-based QR code and event management service. Built with modern Node.js technologies and leveraging Supabase for storage, this project provides robust APIs for QR code generation and event management.
+**Schedula Server** is a high-performance backend service designed to power modern event management systems. Built with TypeScript and Node.js, it excels at generating and managing secure QR codes for event access control, while providing robust health monitoring and comprehensive logging capabilities.
+
+### Why Schedula Server?
+
+- **Security First**: Built with industry-standard security practices using Helmet and CORS protection
+- **Modern Stack**: Leverages TypeScript for type safety and modern ES6+ features
+- **Cloud Ready**: Seamless integration with Supabase for secure and scalable storage
+- **Developer Friendly**: Comprehensive test coverage and detailed documentation
+- **Production Grade**: Built-in health monitoring, error handling, and logging
+- **Enterprise Ready**: Follows best practices for scalability and maintenance
+
+This server is an integral part of the Schedula ecosystem, designed to handle event management needs at scale, from small meetups to large conferences.
 
 ## 📋 Features
 
