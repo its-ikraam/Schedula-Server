@@ -67,6 +67,18 @@ API_URL=http://localhost:3000/health
 HEALTH_CHECK_SCHEDULE="*/14 * * * *"
 ```
 
+The server can be configured through environment variables:
+
+| Variable                     | Description                     | Default                      |
+| ---------------------------- | ------------------------------- | ---------------------------- |
+| `PORT`                       | Port for the server             | 3000                         |
+| `NODE_ENV`                   | Environment mode                | development                  |
+| `SUPABASE_URL`               | Supabase instance URL           | (required)                   |
+| `SUPABASE_ANON_KEY`          | Supabase anonymous key          | (required)                   |
+| `SUPABASE_STORAGE_BUCKET_QR` | Bucket name for QR codes        | (required)                   |
+| `API_URL`                    | URL for API health checks       | http://localhost:3000/health |
+| `HEALTH_CHECK_SCHEDULE`      | Cron schedule for health checks | `*/14 * * * *`               |
+
 ## API Documentation
 
 ### Endpoints
@@ -120,6 +132,31 @@ Response:
 - `npm run build` - Build the TypeScript code
 - `npm run lint` - Run ESLint
 - `npm run format` - Format code with Prettier
+
+## 📚 Technologies
+
+### Core Dependencies
+
+- Express - Web framework
+- Supabase - Backend storage
+- QRCode - QR code generation
+- Cron - Task scheduling
+- Joi - Request validation
+- TypeScript - Type safety
+
+### Development Tools
+
+- ESLint - Code linting
+- Prettier - Code formatting
+- Jest - Testing framework
+- Husky - Manage Git hooks
+- Docker - Containerization
+
+## 📚 Documentation
+
+- [Code Standards](./STANDARDS.md): Coding standards and practices
+- [Contributing Guide](./CONTRIBUTING.md): How to contribute to the project
+- [File Structure](./FILE_STRUCTURE.md): Detailed project structure documentation
 
 ## License
 
