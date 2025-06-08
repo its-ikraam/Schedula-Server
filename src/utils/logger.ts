@@ -20,7 +20,7 @@ const customFormat = winston.format.printf(({ level, message, timestamp }): stri
       coloredLevel = colors.blue(level);
       break;
   }
-  return `[${colors.gray(timestamp)}] ${coloredLevel}: ${message}`;
+  return `[${colors.gray(String(timestamp))}] ${coloredLevel}: ${message}`;
 });
 
 const logFormat = winston.format.combine(
@@ -35,21 +35,18 @@ export const logger = winston.createLogger({
   format: logFormat,
   transports: [
     new winston.transports.Console({
-      format: winston.format.combine(
-        winston.format.colorize(),
-        logFormat
-      )
+      format: winston.format.combine(winston.format.colorize(), logFormat),
     }),
     new winston.transports.DailyRotateFile({
       filename: 'logs/error-%DATE%.log',
       datePattern: 'YYYY-MM-DD',
       level: 'error',
-      maxFiles: '14d'
+      maxFiles: '14d',
     }),
     new winston.transports.DailyRotateFile({
       filename: 'logs/combined-%DATE%.log',
       datePattern: 'YYYY-MM-DD',
-      maxFiles: '14d'
-    })
+      maxFiles: '14d',
+    }),
   ],
 });

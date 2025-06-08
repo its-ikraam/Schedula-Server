@@ -44,14 +44,6 @@ SUPABASE_URL=your_supabase_url
 SUPABASE_ANON_KEY=your_supabase_anon_key
 SUPABASE_STORAGE_BUCKET_QR=your_qr_bucket
 
-# JWT Configuration
-JWT_SECRET=your_jwt_secret
-JWT_EXPIRES_IN=24h
-
-# Rate Limiting
-RATE_LIMIT_WINDOW_MS=900000
-RATE_LIMIT_MAX=100
-
 # Health Check
 API_URL=http://localhost:3000/health
 HEALTH_CHECK_SCHEDULE="*/14 * * * *"
@@ -68,6 +60,7 @@ Authorization: Bearer <your_token>
 ```
 
 The JWT token should be signed with your JWT_SECRET and contain the following payload structure:
+
 ```json
 {
   "userId": "string",
@@ -78,6 +71,7 @@ The JWT token should be signed with your JWT_SECRET and contain the following pa
 ```
 
 Example using [Postman](https://www.postman.com/):
+
 1. Set the request header:
    ```
    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
@@ -95,11 +89,13 @@ Example using [Postman](https://www.postman.com/):
 ### Endpoints
 
 #### Generate QR Code
+
 ```http
 POST /api/qr/generate
 ```
 
 Request Body:
+
 ```json
 {
   "qrId": "string",
@@ -109,6 +105,7 @@ Request Body:
 ```
 
 Response:
+
 ```json
 {
   "status": "success",
@@ -121,11 +118,13 @@ Response:
 ## Development Features
 
 ### Health Check System
+
 - Runs only in development mode
 - Configured through HEALTH_CHECK_SCHEDULE in cron format
 - Monitors API health at configured intervals
 
 ### Logging
+
 - Colored console output in development
 - File-based logging with daily rotation
 - Separate error logs
