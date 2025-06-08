@@ -7,6 +7,15 @@ import { logger } from '../utils/logger';
 export class QRService {
   public static async generateAndUploadQR(params: QRCodeRequest): Promise<QRCodeResponse> {
     try {
+      // Validate required fields
+      if (!params.qrId || !params.qrCode || !params.userId) {
+        return {
+          status: 'error',
+          error: 'Missing required fields',
+          details: 'qrId, qrCode, and userId are required',
+        };
+      }
+
       const { qrId, qrCode, userId } = params;
       const qrData = JSON.stringify({ qrId, qrCode });
 

@@ -51,41 +51,6 @@ HEALTH_CHECK_SCHEDULE="*/14 * * * *"
 
 ## API Documentation
 
-### Authentication
-
-To authenticate requests, include a JWT token in the Authorization header:
-
-```
-Authorization: Bearer <your_token>
-```
-
-The JWT token should be signed with your JWT_SECRET and contain the following payload structure:
-
-```json
-{
-  "userId": "string",
-  "role": "string",
-  "iat": number,
-  "exp": number
-}
-```
-
-Example using [Postman](https://www.postman.com/):
-
-1. Set the request header:
-   ```
-   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-   ```
-2. The token payload should look like:
-   ```json
-   {
-     "userId": "user123",
-     "role": "user",
-     "iat": 1623456789,
-     "exp": 1623543189
-   }
-   ```
-
 ### Endpoints
 
 #### Generate QR Code
@@ -134,7 +99,6 @@ Response:
 
 - `npm start` - Start the server in production mode
 - `npm run dev` - Start the server in development mode with hot reload
-- `npm test` - Run tests
 - `npm run build` - Build the TypeScript code
 - `npm run lint` - Run ESLint
 - `npm run format` - Format code with Prettier
