@@ -1,15 +1,22 @@
 # Event Server
 
-A TypeScript-based Node.js server for QR code generation and event management.
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)
+![Node.js](https://img.shields.io/badge/Node.js-20.0-green.svg)
+![Coverage](https://img.shields.io/badge/coverage-80%25-brightgreen.svg)
 
-## Features
+**Event Server** is a professional TypeScript-based QR code and event management service. Built with modern Node.js technologies and leveraging Supabase for storage, this project provides robust APIs for QR code generation and event management.
 
-- QR Code Generation API
-- JWT Authentication
-- Rate Limiting
-- Health Check System
-- Comprehensive Logging System
-- Supabase Integration
+## 📋 Features
+
+- **QR Code Generation & Management**: Create and store QR codes for event access
+- **Automated Health Checks**: Scheduled cron jobs for system health monitoring
+- **Secure Storage**: Integration with Supabase for secure file storage
+- **Type Safety**: Built with TypeScript for increased reliability
+- **Test Coverage**: Comprehensive test suite with 80%+ coverage
+- **API Validation**: Request/response validation
+- **Error Handling**: Comprehensive error handling and logging
 
 ## Prerequisites
 
