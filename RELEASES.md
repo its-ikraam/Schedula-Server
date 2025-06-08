@@ -1,5 +1,25 @@
 # Release History
 
+## [v1.0.1] - 2025-06-08
+
+### Testing Improvements 🧪
+
+#### Changes
+
+- Enhanced test setup with Jest and TypeScript
+- Simplified test configuration
+- Added focused test cases
+- Improved test scripts
+- Better mocking setup
+
+#### Testing Features
+
+- Jest with TypeScript support
+- Global test setup and mocks
+- Service and Controller tests
+- Simple and maintainable test cases
+- Watch mode and coverage reporting
+
 ## [v1.0.0] - 2025-06-08
 
 ### Initial Release 🎉
