@@ -5,6 +5,7 @@
 <img src="https://img.shields.io/badge/-ESLint-000000?style=for-the-badge&logo=eslint&logoColor=4B32C3" alt="ESLint" />
 <img src="https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
 <img src="https://img.shields.io/badge/-Node.js-000000?style=for-the-badge&logo=node.js&logoColor=3C873A" alt="Node.js" />
+<img src="https://img.shields.io/badge/-Render-000000?style=for-the-badge&logo=render&logoColor=46E3B7" alt="Render" />
 </div>
 
 # Schedula Server
