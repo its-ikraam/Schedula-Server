@@ -35,11 +35,11 @@ export class HealthCheckService {
     });
   }
   public start(): void {
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'development') {
       this.job.start();
       logger.info(`Health check cron job started with schedule: ${this.job.cronTime.source}`);
     } else {
-      logger.info('Health check cron job not started: only runs in production mode');
+      logger.info('Health check cron job not started: only runs in development mode');
     }
   }
 
