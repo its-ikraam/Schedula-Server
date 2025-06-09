@@ -1,6 +1,6 @@
 {
   "name": "schedula-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "High-performance event management backend service with QR code generation, health monitoring, and comprehensive logging capabilities",
   "main": "dist/index.js",
   "scripts": {

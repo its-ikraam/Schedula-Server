@@ -1,3 +1,12 @@
+<div align="center">
+<img src="https://img.shields.io/badge/-Supabase-000000?style=for-the-badge&logo=supabase&logoColor=3dc48f" alt="Supabase" />
+<img src="https://img.shields.io/badge/-TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=blue" alt="TypeScript" />
+<img src="https://img.shields.io/badge/-Husky-000000?style=for-the-badge&logo=husky&logoColor=white" alt="Husky" />
+<img src="https://img.shields.io/badge/-ESLint-000000?style=for-the-badge&logo=eslint&logoColor=4B32C3" alt="ESLint" />
+<img src="https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
+<img src="https://img.shields.io/badge/-Node.js-000000?style=for-the-badge&logo=node.js&logoColor=3C873A" alt="Node.js" />
+</div>
+
 # Schedula Server
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
@@ -19,7 +28,7 @@
 
 This server is an integral part of the Schedula ecosystem, designed to handle event management needs at scale, from small meetups to large conferences.
 
-## 📋 Features
+## 📚 Features
 
 - **QR Code Generation & Management**: Create and store QR codes for event access
 - **Automated Health Checks**: Scheduled cron jobs for system health monitoring
@@ -29,13 +38,13 @@ This server is an integral part of the Schedula ecosystem, designed to handle ev
 - **API Validation**: Request/response validation
 - **Error Handling**: Comprehensive error handling and logging
 
-## Prerequisites
+## 📚 Prerequisites
 
 - Node.js (v14 or higher)
 - npm
 - A Supabase account and project
 
-## Installation
+## 📚 Installation
 
 1. Clone the repository
 2. Install dependencies:
@@ -49,7 +58,7 @@ This server is an integral part of the Schedula ecosystem, designed to handle ev
    npm start     # for production
    ```
 
-## Configuration
+## 📚 Configuration
 
 Create a `.env` file with the following variables:
 
@@ -79,7 +88,7 @@ The server can be configured through environment variables:
 | `API_URL`                    | URL for API health checks       | http://localhost:3000/health |
 | `HEALTH_CHECK_SCHEDULE`      | Cron schedule for health checks | `*/14 * * * *`               |
 
-## API Documentation
+## 📚 API Documentation
 
 ### Endpoints
 
@@ -110,7 +119,7 @@ Response:
 }
 ```
 
-## Development Features
+## 📚 Development Features
 
 ### Health Check System
 
@@ -125,7 +134,7 @@ Response:
 - Separate error logs
 - JSON formatting for production
 
-## Scripts
+## 📚 Scripts
 
 - `npm start` - Start the server in production mode
 - `npm run dev` - Start the server in development mode with hot reload
@@ -158,6 +167,6 @@ Response:
 - [Contributing Guide](./CONTRIBUTING.md): How to contribute to the project
 - [File Structure](./FILE_STRUCTURE.md): Detailed project structure documentation
 
-## License
+## 📚 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
