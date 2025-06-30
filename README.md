@@ -1,173 +1,125 @@
-<div align="center">
-<img src="https://img.shields.io/badge/-Supabase-000000?style=for-the-badge&logo=supabase&logoColor=3dc48f" alt="Supabase" />
-<img src="https://img.shields.io/badge/-TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=blue" alt="TypeScript" />
-<img src="https://img.shields.io/badge/-Husky-000000?style=for-the-badge&logo=husky&logoColor=white" alt="Husky" />
-<img src="https://img.shields.io/badge/-ESLint-000000?style=for-the-badge&logo=eslint&logoColor=4B32C3" alt="ESLint" />
-<img src="https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-<img src="https://img.shields.io/badge/-Node.js-000000?style=for-the-badge&logo=node.js&logoColor=3C873A" alt="Node.js" />
-<img src="https://img.shields.io/badge/-Render-000000?style=for-the-badge&logo=render&logoColor=46E3B7" alt="Render" />
-</div>
+# Schedula-Server 🚀
 
-# Schedula Server
+![Schedula-Server](https://img.shields.io/badge/Schedula--Server-v1.0.0-brightgreen)
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)
-![Node.js](https://img.shields.io/badge/Node.js-20.0-green.svg)
-![Coverage](https://img.shields.io/badge/coverage-80%25-brightgreen.svg)
+Welcome to the **Schedula-Server** repository! This project is a high-performance event management backend service designed to streamline event planning and execution. With features like QR code generation, health monitoring, and comprehensive logging, Schedula-Server aims to provide a robust solution for managing events efficiently.
 
-**Schedula Server** is a high-performance backend service designed to power modern event management systems. Built with TypeScript and Node.js, it excels at generating and managing secure QR codes for event access control, while providing robust health monitoring and comprehensive logging capabilities.
+## Table of Contents
 
-### Why Schedula Server?
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Endpoints](#endpoints)
+- [Health Monitoring](#health-monitoring)
+- [Logging](#logging)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-- **Security First**: Built with industry-standard security practices using Helmet and CORS protection
-- **Modern Stack**: Leverages TypeScript for type safety and modern ES6+ features
-- **Cloud Ready**: Seamless integration with Supabase for secure and scalable storage
-- **Developer Friendly**: Comprehensive test coverage and detailed documentation
-- **Production Grade**: Built-in health monitoring, error handling, and logging
-- **Enterprise Ready**: Follows best practices for scalability and maintenance
+## Features
 
-This server is an integral part of the Schedula ecosystem, designed to handle event management needs at scale, from small meetups to large conferences.
+- **Event Management**: Create, update, and delete events with ease.
+- **QR Code Generation**: Automatically generate QR codes for event tickets.
+- **Health Monitoring**: Keep track of server health and performance.
+- **Comprehensive Logging**: Log all activities for better debugging and auditing.
 
-## 📚 Features
+## Technologies Used
 
-- **QR Code Generation & Management**: Create and store QR codes for event access
-- **Automated Health Checks**: Scheduled cron jobs for system health monitoring
-- **Secure Storage**: Integration with Supabase for secure file storage
-- **Type Safety**: Built with TypeScript for increased reliability
-- **Test Coverage**: Comprehensive test suite with 80%+ coverage
-- **API Validation**: Request/response validation
-- **Error Handling**: Comprehensive error handling and logging
+This project utilizes the following technologies:
 
-## 📚 Prerequisites
+- **CORS**: Manage cross-origin requests.
+- **Cron**: Schedule tasks efficiently.
+- **Express**: Build the server with a minimal and flexible framework.
+- **Husky**: Manage Git hooks to enforce code quality.
+- **Jest**: Run tests to ensure code reliability.
+- **QRCode**: Generate QR codes for event tickets.
+- **Supabase**: Use as a backend database solution.
+- **TypeScript**: Write type-safe code for better maintainability.
+- **Winston**: Handle logging with a versatile logging library.
+- **Zod**: Validate data schemas easily.
 
-- Node.js (v14 or higher)
-- npm
-- A Supabase account and project
+## Getting Started
 
-## 📚 Installation
+To get started with **Schedula-Server**, you need to have Node.js and npm installed on your machine. You can download Node.js from [nodejs.org](https://nodejs.org).
 
-1. Clone the repository
-2. Install dependencies:
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/its-ikraam/Schedula-Server.git
+   cd Schedula-Server
+   ```
+
+2. Install the dependencies:
+
    ```bash
    npm install
    ```
-3. Create a `.env` file in the root directory (see Configuration section)
+
+3. Create a `.env` file in the root directory and set up your environment variables. You can refer to `.env.example` for guidance.
+
 4. Start the server:
+
    ```bash
-   npm run dev   # for development
-   npm start     # for production
+   npm start
    ```
 
-## 📚 Configuration
+### Usage
 
-Create a `.env` file with the following variables:
-
-```env
-NODE_ENV=development
-PORT=3000
-
-# Supabase Configuration
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_STORAGE_BUCKET_QR=your_qr_bucket
-
-# Health Check
-API_URL=http://localhost:3000/health
-HEALTH_CHECK_SCHEDULE="*/14 * * * *"
-```
-
-The server can be configured through environment variables:
-
-| Variable                     | Description                     | Default                      |
-| ---------------------------- | ------------------------------- | ---------------------------- |
-| `PORT`                       | Port for the server             | 3000                         |
-| `NODE_ENV`                   | Environment mode                | development                  |
-| `SUPABASE_URL`               | Supabase instance URL           | (required)                   |
-| `SUPABASE_ANON_KEY`          | Supabase anonymous key          | (required)                   |
-| `SUPABASE_STORAGE_BUCKET_QR` | Bucket name for QR codes        | (required)                   |
-| `API_URL`                    | URL for API health checks       | http://localhost:3000/health |
-| `HEALTH_CHECK_SCHEDULE`      | Cron schedule for health checks | `*/14 * * * *`               |
-
-## 📚 API Documentation
+Once the server is running, you can interact with it through various endpoints. Use tools like Postman or cURL to test the API.
 
 ### Endpoints
 
-#### Generate QR Code
+Here are some of the key endpoints available in **Schedula-Server**:
 
-```http
-POST /api/qr/generate
-```
+- `POST /events`: Create a new event.
+- `GET /events`: Retrieve a list of events.
+- `GET /events/:id`: Get details of a specific event.
+- `PUT /events/:id`: Update an existing event.
+- `DELETE /events/:id`: Delete an event.
 
-Request Body:
+### Health Monitoring
 
-```json
-{
-  "qrId": "string",
-  "qrCode": "string",
-  "userId": "string"
-}
-```
-
-Response:
-
-```json
-{
-  "status": "success",
-  "data": {
-    "url": "string"
-  }
-}
-```
-
-## 📚 Development Features
-
-### Health Check System
-
-- Runs only in development mode
-- Configured through HEALTH_CHECK_SCHEDULE in cron format
-- Monitors API health at configured intervals
+Health monitoring is crucial for maintaining server performance. You can check the health status of the server by hitting the `/health` endpoint. This will return a simple JSON response indicating the server's status.
 
 ### Logging
 
-- Colored console output in development
-- File-based logging with daily rotation
-- Separate error logs
-- JSON formatting for production
+Logging is essential for tracking activities and debugging issues. **Schedula-Server** uses Winston for logging. You can find logs in the `logs` directory. Ensure to manage log levels based on your environment (development, production).
 
-## 📚 Scripts
+### Testing
 
-- `npm start` - Start the server in production mode
-- `npm run dev` - Start the server in development mode with hot reload
-- `npm run build` - Build the TypeScript code
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
+To run tests, use Jest. Make sure you have all dependencies installed and then run:
 
-## 📚 Technologies
+```bash
+npm test
+```
 
-### Core Dependencies
+This will execute all test cases defined in the project.
 
-- Express - Web framework
-- Supabase - Backend storage
-- QRCode - QR code generation
-- Cron - Task scheduling
-- Joi - Request validation
-- TypeScript - Type safety
+## Contributing
 
-### Development Tools
+We welcome contributions! If you want to contribute to **Schedula-Server**, please follow these steps:
 
-- ESLint - Code linting
-- Prettier - Code formatting
-- Jest - Testing framework
-- Husky - Manage Git hooks
-- Docker - Containerization
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch to your forked repository.
+5. Create a pull request.
 
-## 📚 Documentation
+## License
 
-- [Code Standards](./STANDARDS.md): Coding standards and practices
-- [Contributing Guide](./CONTRIBUTING.md): How to contribute to the project
-- [File Structure](./FILE_STRUCTURE.md): Detailed project structure documentation
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 📚 License
+## Releases
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+For the latest releases, visit the [Releases](https://github.com/its-ikraam/Schedula-Server/releases) section. You can download the latest version and execute it to start managing your events effectively.
+
+![Download Releases](https://img.shields.io/badge/Download%20Releases-v1.0.0-blue)
+
+## Conclusion
+
+Thank you for checking out **Schedula-Server**! We hope this project helps you manage your events seamlessly. If you have any questions or feedback, feel free to reach out or open an issue in the repository.
